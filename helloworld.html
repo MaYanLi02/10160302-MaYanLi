@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+    function create_label(label)//函数
+    {
+         var label_temp=document.getElementById("div_id");
+         //声明变量label_temp，实现label_temp对指定ID（div_id）的第一个对象的引用
+          if(!label_temp)
+          {
+            label_temp=document.createElement('p');//创建对象label_temp
+            //设置对象的属性值
+            label_temp.id='div_id';
+            label_temp.innerHTML="HelloWorld";//设置标签内容为HelloWorld，如果使用innerText则不包含html的标签
+            document.body.appendChild(label_temp)//将创建的label_temp对象加到body的末尾
+          }
+    }
+    //在默认情况下，整个页面在加载时会触发window.onload,从而调用函数create_lable
+    window.onload=create_label
+    </script>
+    </body>
+</html>
