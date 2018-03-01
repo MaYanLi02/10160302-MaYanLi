@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <script>
+        // 动态创建canvas标签画布
+        var canvas=document.createElement("canvas");
+        // 设置其相应的属性宽、高、id
+        canvas.width=400;
+        canvas.height=400;
+        canvas.id="Mycanvas";
+        //将动态创建的canvas添加到网页中
+        document.body.appendChild(canvas);
+        // 新建对象Shape,获取当前的画布
+        var shape=document.getElementById("Mycanvas");
+        var shape_canvas=shape.getContext("2d");
+        // 绘制直线段
+        shape_canvas.moveTo(0,0);//指定开始坐标
+        shape_canvas.lineTo(50,100);
+        shape_canvas.lineTo(50,50);
+        shape_canvas.lineTo(100,200);
+        shape_canvas.stroke();
+        //绘制矩形
+        shape_canvas.fillStyle="#FF0000";
+        shape_canvas.fillRect(200,200,150,75);
+        </script>
+    </body>
+</html>
