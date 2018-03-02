@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <p id="p1"></p>
+    <script>
+    //创建元素节点
+    var element=document.createElement("label");
+    //创建文本节点
+    var textnode=document.createTextNode("Hello World!");
+    //在指定元素节点的最后一个子节点后添加文本节点
+    element.appendChild(textnode);
+    document.getElementById("p1").appendChild(element);
+    </script>
+    </body>
+</html>
